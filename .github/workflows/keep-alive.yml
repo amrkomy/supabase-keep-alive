@@ -1,20 +1,58 @@
-name: Keep Supabase Alive
+name: Keep All Supabase Projects Alive
 
 on:
   schedule:
-    # كل أحد الساعة 12 منتصف الليل (UTC) = كل 7 أيام
-    - cron: '0 0 * * 0'
-  # علشان تقدر تجربه يدويًا من لوحة التحكم
-  workflow_dispatch:
+    - cron: '0 0 * * 0'  # كل أحد الساعة 12 منتصف الليل (UTC)
+  workflow_dispatch:     # علشان تقدر تشغله يدويًا
 
 jobs:
-  ping:
+  ping-all-projects:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Ping to Supabase
+      - name: Ping Project 1 (bjviqasptsgoiwyfusqz)
+        run: |
+          curl -X POST https://bjviqasptsgoiwyfusqz.supabase.co/rest/v1/ping_table \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqdmlxYXNwdHNnb2l3eWZ1c3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ4NDQxMzUsImV4cCI6MjA3MDQyMDEzNX0.kY5q8o-36534m7uz4kJ9aQd_DaovlkQxlV-yiWwGOzs" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqdmlxYXNwdHNnb2l3eWZ1c3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ4NDQxMzUsImV4cCI6MjA3MDQyMDEzNX0.kY5q8o-36534m7uz4kJ9aQd_DaovlkQxlV-yiWwGOzs" \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Ping Project 2 (ieqedtoydoygkutskwxa)
+        run: |
+          curl -X POST https://ieqedtoydoygkutskwxa.supabase.co/rest/v1/ping_table \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImllcWVkdG95ZG95Z2t1dHNrd3hhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAxMDEyODUsImV4cCI6MjA3NTY3NzI4NX0.eKaU3MbjdRw0PF08h50-3_KFrjQXkdlKwabq9EJU8TA" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImllcWVkdG95ZG95Z2t1dHNrd3hhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAxMDEyODUsImV4cCI6MjA3NTY3NzI4NX0.eKaU3MbjdRw0PF08h50-3_KFrjQXkdlKwabq9EJU8TA" \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Ping Project 3 (cchslpjpqqopbxatioes)
+        run: |
+          curl -X POST https://cchslpjpqqopbxatioes.supabase.co/rest/v1/ping_table \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNjaHNscGpwcXFvcGJ4YXRpb2VzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMxMzcwOTcsImV4cCI6MjA2ODcxMzA5N30.R7EOKn-JkOYe2RrqpAYLnKZaMre430YFLcWqzmSS7fI" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNjaHNscGpwcXFvcGJ4YXRpb2VzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMxMzcwOTcsImV4cCI6MjA2ODcxMzA5N30.R7EOKn-JkOYe2RrqpAYLnKZaMre430YFLcWqzmSS7fI" \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Ping Project 4 (jcdgazcspxqfboojqoak)
         run: |
           curl -X POST https://jcdgazcspxqfboojqoak.supabase.co/rest/v1/ping_table \
             -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZGdhemNzcHhxZmJvb2pxb2FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTQzNzAsImV4cCI6MjA2ODY3MDM3MH0.NGWi3Vm7XA5xyj9BxSTOygRdNnZSwZ1zuPDcMBLpUb8" \
             -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZGdhemNzcHhxZmJvb2pxb2FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTQzNzAsImV4cCI6MjA2ODY3MDM3MH0.NGWi3Vm7XA5xyj9BxSTOygRdNnZSwZ1zuPDcMBLpUb8" \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Ping Project 5 (gotaturvtsikrfyeuhqf)
+        run: |
+          curl -X POST https://gotaturvtsikrfyeuhqf.supabase.co/rest/v1/ping_table \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdvdGF0dXJ2dHNpa3JmeWV1aHFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5MjgzMTYsImV4cCI6MjA3MzUwNDMxNn0.aE69KmL9MB-aUmcHPUdSSS4oaKfeoJmqaQ8ffZ5d0xo" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdvdGF0dXJ2dHNpa3JmeWV1aHFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc5MjgzMTYsImV4cCI6MjA3MzUwNDMxNn0.aE69KmL9MB-aUmcHPUdSSS4oaKfeoJmqaQ8ffZ5d0xo" \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Ping Project 6 (xqccuvhtrxhsrzqgktdj)
+        run: |
+          curl -X POST https://xqccuvhtrxhsrzqgktdj.supabase.co/rest/v1/ping_table \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxY2N1dmh0cnhoc3J6cWdrdGRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0MzI5MDMsImV4cCI6MjA3MTAwODkwM30.wDVE-gsAUgjmv82pYKoMMMeF3YRAgFVWg854G5YLpyE" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxY2N1dmh0cnhoc3J6cWdrdGRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0MzI5MDMsImV4cCI6MjA3MTAwODkwM30.wDVE-gsAUgjmv82pYKoMMMeF3YRAgFVWg854G5YLpyE" \
             -H "Content-Type: application/json" \
             -d '{}'
