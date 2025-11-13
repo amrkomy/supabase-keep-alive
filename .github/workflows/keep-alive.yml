@@ -2,7 +2,7 @@ name: Keep All Supabase Projects Alive
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # كل أحد الساعة 12 منتصف الليل (UTC)
+    - cron: '0 0 * * *'  # كل يوم الساعة 12 منتصف الليل (UTC)
   workflow_dispatch:     # علشان تقدر تشغله يدويًا
 
 jobs:
@@ -56,7 +56,8 @@ jobs:
             -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxY2N1dmh0cnhoc3J6cWdrdGRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0MzI5MDMsImV4cCI6MjA3MTAwODkwM30.wDVE-gsAUgjmv82pYKoMMMeF3YRAgFVWg854G5YLpyE" \
             -H "Content-Type: application/json" \
             -d '{}'
-      - name: Ping Project 6 (xqccuvhtrxhsrzqgktdj)
+
+      - name: Ping Project 7 (xczrexzzmmrpdokcitvg)
         run: |
           curl -X POST https://xczrexzzmmrpdokcitvg.supabase.co/rest/v1/ping_table \
             -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjenJleHp6bW1ycGRva2NpdHZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA1MDExNDEsImV4cCI6MjA3NjA3NzE0MX0.RoTn4GQ7yOKhGInH6aIuuXpmlvzFfx0tY6gn9Myx1Gk" \
