@@ -5,7 +5,6 @@ on:
     - cron: '0 0 * * *'  # كل يوم الساعة 12 منتصف الليل (UTC)
   workflow_dispatch:     # علشان تقدر تشغله يدويًا
 
-  
 jobs:
   ping-all-projects:
     runs-on: ubuntu-latest
@@ -35,7 +34,7 @@ jobs:
             -d '{}'
 
       - name: Ping Project 4 (jcdgazcspxqfboojqoak)
-        run: | 
+        run: |
           curl -X POST https://jcdgazcspxqfboojqoak.supabase.co/rest/v1/ping_table \
             -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZGdhemNzcHhxZmJvb2pxb2FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTQzNzAsImV4cCI6MjA2ODY3MDM3MH0.NGWi3Vm7XA5xyj9BxSTOygRdNnZSwZ1zuPDcMBLpUb8" \
             -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZGdhemNzcHhxZmJvb2pxb2FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTQzNzAsImV4cCI6MjA2ODY3MDM3MH0.NGWi3Vm7XA5xyj9BxSTOygRdNnZSwZ1zuPDcMBLpUb8" \
@@ -66,7 +65,7 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{}'
 
-        - name: Ping Project 8 (mehycwkqiwaeumauaanh)
+      - name: Ping Project 8 (mehycwkqiwaeumauaanh)
         run: |
           curl -X POST https://mehycwkqiwaeumauaanh.supabase.co/rest/v1/ping_table \
             -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1laHljd2txaXdhZXVtYXVhYW5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxMTQ5NTIsImV4cCI6MjA3ODY5MDk1Mn0.IJTtLNRhXsasaw-d8j_kIjKbZRTcvlM5f8zCzDEXGUA" \
