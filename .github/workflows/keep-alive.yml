@@ -5,6 +5,7 @@ on:
     - cron: '0 0 * * *'  # كل يوم الساعة 12 منتصف الليل (UTC)
   workflow_dispatch:     # علشان تقدر تشغله يدويًا
 
+  
 jobs:
   ping-all-projects:
     runs-on: ubuntu-latest
