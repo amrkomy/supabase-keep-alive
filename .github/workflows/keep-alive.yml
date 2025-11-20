@@ -34,7 +34,7 @@ jobs:
             -d '{}'
 
       - name: Ping Project 4 (jcdgazcspxqfboojqoak)
-        run: |
+        run: | 
           curl -X POST https://jcdgazcspxqfboojqoak.supabase.co/rest/v1/ping_table \
             -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZGdhemNzcHhxZmJvb2pxb2FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTQzNzAsImV4cCI6MjA2ODY3MDM3MH0.NGWi3Vm7XA5xyj9BxSTOygRdNnZSwZ1zuPDcMBLpUb8" \
             -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjZGdhemNzcHhxZmJvb2pxb2FrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTQzNzAsImV4cCI6MjA2ODY3MDM3MH0.NGWi3Vm7XA5xyj9BxSTOygRdNnZSwZ1zuPDcMBLpUb8" \
