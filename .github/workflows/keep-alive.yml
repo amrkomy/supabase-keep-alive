@@ -2,8 +2,8 @@ name: Keep All Supabase Projects Alive
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # كل يوم الساعة 12 منتصف الليل (UTC)
-  workflow_dispatch:     # يدوياً عند الحاجة
+    - cron: '0 0 * * *'  # Every day at midnight UTC
+  workflow_dispatch:     # Allows manual triggering
 
 jobs:
   ping-all-projects:
@@ -70,5 +70,13 @@ jobs:
           curl -X POST https://mehycwkqiwaeumauaanh.supabase.co/rest/v1/ping_table \
             -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1laHljd2txaXdhZXVtYXVhYW5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxMTQ5NTIsImV4cCI6MjA3ODY5MDk1Mn0.IJTtLNRhXsasaw-d8j_kIjKbZRTcvlM5f8zCzDEXGUA" \
             -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1laHljd2txaXdhZXVtYXVhYW5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxMTQ5NTIsImV4cCI6MjA3ODY5MDk1Mn0.IJTtLNRhXsasaw-d8j_kIjKbZRTcvlM5f8zCzDEXGUA" \
+            -H "Content-Type: application/json" \
+            -d "{}"
+
+      - name: Ping Project 9 (jdwhmebrdeshnjofditj)
+        run: |
+          curl -X POST https://jdwhmebrdeshnjofditj.supabase.co/rest/v1/ping_table \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impkd2htZWJyZGVzaG5qb2ZkaXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2NjEyNDEsImV4cCI6MjA3OTIzNzI0MX0.ymEqrGQhT7-w1Eu05pS8TsD_mEwJOiTHvQXeyFN8pt0" \
+            -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impkd2htZWJyZGVzaG5qb2ZkaXRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2NjEyNDEsImV4cCI6MjA3OTIzNzI0MX0.ymEqrGQhT7-w1Eu05pS8TsD_mEwJOiTHvQXeyFN8pt0" \
             -H "Content-Type: application/json" \
             -d "{}"
